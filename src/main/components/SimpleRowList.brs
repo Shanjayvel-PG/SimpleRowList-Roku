@@ -25,10 +25,13 @@ function GetRowListContent() as object
         row.title = "Display Images"
         ' row.title = "Title " + stri(numRows)
         image = ["https://th.bing.com/th/id/OIP.vE6AVzLshgSKPmUesZPm7AHaE8?rs=1&pid=ImgDetMain","https://th.bing.com/th/id/OIP.-ZirgQE5pr8e7htQWowJIgHaHa?rs=1&pid=ImgDetMain","https://www.telugu360.com/wp-content/uploads/2018/06/WhatsApps-one-way-broadcast-mode-for-group-chats-is-here.jpg","https://1.bp.blogspot.com/-qdRfUNOtjkM/XeI_00z9pzI/AAAAAAAAF4E/FeD2SvVFnKUjPAKQ_cNM6-D2ahjKb0HkQCLcBGAsYHQ/s1600/Youtube-Icon-square-2340x2340-2.png","https://brandlogos.net/wp-content/uploads/2023/07/x__twitter-logo_brandlogos.net_fxbde-300x300.png"]
+        duration=["1;00","2:00","3:00","4:00","5:00"]
         for i = 0 to 4
             item = row.CreateChild("SimpleRowListItemData")
             item.posterUrl = image[i]
+            item.posterUrl = duration
             item.labelText = "Image Number" + stri(numRows*5+1 + i)
+
         
         end for
     end for
