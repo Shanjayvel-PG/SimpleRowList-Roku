@@ -2,13 +2,15 @@ function init()
     print "in SimpleRowListPanel init()"
     m.top.itemComponentName = "SimpleRowListItem"
     m.top.numRows = 2
-    m.top.itemSize = [196 * 5 + 20 * 4, 213]
+    m.top.itemSize = [1200,213]
     m.top.rowHeights = [213]
-    m.top.rowItemSize = [ [196, 213], [196, 213], [196, 213], [196, 213], [196, 213] ]
+    m.top.rowItemSize = [ [196, 148] ]
     m.top.itemSpacing = [ 0, 80 ]
     m.top.rowItemSpacing = [ [20, 0] ]
     m.top.rowLabelOffset = [ [0, 30] ]
     m.top.rowFocusAnimationStyle = "floatingFocus"
+    m.top.drawFocusFeedback=true
+    m.top.drawFocusFeedbackOnTop=true
     m.top.showRowLabel = [true, true]
     m.top.rowLabelColor="0xa0b033ff"
     m.top.content = GetRowListContent()
@@ -29,8 +31,8 @@ function GetRowListContent() as object
         for i = 0 to 4
             item = row.CreateChild("SimpleRowListItemData")
             item.posterUrl = image[i]
-            item.posterUrl = duration
-            item.labelText = "Image Number" + stri(numRows*5+1 + i)
+            item.duration = duration[i]
+            item.labelText = "Image Number" + stri(numRows*5 + i)
 
         
         end for
